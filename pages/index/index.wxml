@@ -12,9 +12,15 @@
 </view>
 <!--视频列表 -->
 <view class='video_wrap'>
-  <navigator url="../{{item.en}}/{{item.en}}?en={{item.en}}" class='video_item' wx:for="{{videosList}}" wx:key="{{index}}">
-      <view class='video_info'>
+  <navigator url="../{{item.en}}/{{item.en}}?en={{item.en}}" class='video_item' wx:for="{{newLists}}" wx:key="{{index}}">
+  <block wx:if="{{index<6}}">
+    <view class='video_info'>
         {{item.cn}}
+        总计{{item.count}}
       </view>
+</block>
+<block wx:else>
+ 
+</block>  
   </navigator>
 </view>

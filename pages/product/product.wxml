@@ -1,4 +1,6 @@
-<scroll-view scroll-x="true" class='scrollClass'>
+
+     <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" scroll-x style="height:{{scrollHeight}}rpx;" 
+ class="scrollClass" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
 <view class="table">
   <view class="tr bg-w">
     <view class="th">商品名称</view>

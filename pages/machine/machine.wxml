@@ -1,4 +1,7 @@
-<scroll-view scroll-x="true" class='scrollClass'>
+
+
+     <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" scroll-x style="height:{{scrollHeight}}rpx;" 
+ class="scrollClass" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
 <view class="table">
   <view class="tr bg-w">
     <view class="th">设备名称</view>
@@ -13,7 +16,7 @@
     <view class="th">投放时间</view>  
     <view class="th">层数</view>     
   </view>
-  <block wx:for="{{orderData}}" wx:key="{{code}}">
+  <block wx:for="{{list}}" wx:key="{{code}}">
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
       <view class="td">{{item.machineName}}</view> 
       <view class="td">{{item.machineStatus}}</view> 

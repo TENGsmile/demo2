@@ -1,4 +1,6 @@
-<scroll-view scroll-x="true" class='scrollClass'>
+
+     <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" scroll-x style="height:{{scrollHeight}}rpx;" 
+ class="scrollClass" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
 <view class="table">
   <view class="tr bg-w">
     <view class="th">创建时间</view>
@@ -8,7 +10,7 @@
     <view class="th">折价后</view>
     <view class="th">订单状态</view>  
   </view>
-  <block wx:for="{{orderData}}" wx:key="{{code}}">
+  <block wx:for="{{list}}" wx:key="{{code}}">
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
       <view class="td">{{item.createdDate}}</view> 
       <view class="td">{{item.mobile}}</view> 

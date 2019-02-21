@@ -1,4 +1,8 @@
-<scroll-view scroll-x="true" class='scrollClass'>
+
+ <view class="container" style="padding:0rpx">
+   <!--垂直滚动，这里必须设置高度-->
+     <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" scroll-x style="height:{{scrollHeight}}rpx;" 
+ class="scrollClass" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad"  bindscroll="scroll">
 <view class="table">
   <view class="tr bg-w">
     <view class="th">联系方式</view>
@@ -7,7 +11,7 @@
     <view class="th">注册方式</view>
     <view class="th">喜好商品标签</view>  
   </view>
-  <block wx:for="{{orderData}}" wx:key="{{code}}">
+  <block wx:for="{{list}}" wx:key="{{code}}">
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
       <view class="td">{{item.mobile}}</view> 
       <view class="td">{{item.accountBalance}}</view> 
@@ -25,3 +29,4 @@
   </block>
 </view>
 </scroll-view>
+</view>
