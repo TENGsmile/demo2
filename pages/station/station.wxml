@@ -1,0 +1,18 @@
+<scroll-view scroll-x="true" class='scrollClass'>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">大区名称</view>
+    <view class="th">站点名称</view>
+  </view>
+  <block wx:for="{{orderData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.companyName}}</view> 
+      <view class="td">{{item.stationName}}</view> 
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.companyName}}</view> 
+      <view class="td">{{item.stationName}}</view>  
+    </view>
+  </block>
+</view>
+</scroll-view>

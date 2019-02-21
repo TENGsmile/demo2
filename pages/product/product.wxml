@@ -1,0 +1,42 @@
+<scroll-view scroll-x="true" class='scrollClass'>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">商品名称</view>
+    <view class="th">商品展示类别</view>
+    <view class="th">单位</view>
+    <view class="th">规格</view>
+    <view class="th">保质期</view>
+    <view class="th">售价</view> 
+    <view class="th">进价</view> 
+    <view class="th">来源</view> 
+    <view class="th">商品标签</view>
+    <view class="th">生产日期</view>   
+  </view>
+  <block wx:for="{{orderData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.productName}}</view> 
+      <view class="td">{{item.categoryName}}</view> 
+      <view class="td">{{item.spec}}</view> 
+      <view class="td">{{item.unit}}</view> 
+      <view class="td">{{item.shelfLife}}</view> 
+      <view class="td">{{item.salePrice}}</view> 
+      <view class="td">{{item.purchasePrice}}</view>
+      <view class="td">{{item.productSource}}</view>
+      <view class="td">{{item.labelName}}</view>
+      <view class="td">{{item.productDate}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.productName}}</view> 
+      <view class="td">{{item.categoryName}}</view> 
+      <view class="td">{{item.spec}}</view> 
+      <view class="td">{{item.unit}}</view> 
+      <view class="td">{{item.shelfLife}}</view> 
+      <view class="td">{{item.salePrice}}</view> 
+      <view class="td">{{item.purchasePrice}}</view>
+      <view class="td">{{item.productSource}}</view>
+      <view class="td">{{item.labelName}}</view>
+      <view class="td">{{item.productDate}}</view>
+    </view>
+  </block>
+</view>
+</scroll-view>

@@ -1,0 +1,27 @@
+<scroll-view scroll-x="true" class='scrollClass'>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">联系方式</view>
+    <view class="th">账户余额</view>
+    <view class="th">消费总金额</view>
+    <view class="th">注册方式</view>
+    <view class="th">喜好商品标签</view>  
+  </view>
+  <block wx:for="{{orderData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.mobile}}</view> 
+      <view class="td">{{item.accountBalance}}</view> 
+      <view class="td">{{item.monetary}}</view> 
+      <view class="td">{{item.registerType}}</view> 
+      <view class="td">{{item.labelName}}</view> 
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.mobile}}</view> 
+      <view class="td">{{item.accountBalance}}</view> 
+      <view class="td">{{item.monetary}}</view> 
+      <view class="td">{{item.registerType}}</view> 
+      <view class="td">{{item.labelName}}</view> 
+    </view>
+  </block>
+</view>
+</scroll-view>

@@ -4,75 +4,82 @@ Page({
    * 页面的初始数据
    */
   data: {
-    //首页导航数据
-    navList:[],
-    //得点击首页导航菜单的索引
-    currentIndexNav:0,
-    //轮播图数据
-    swiperList: ["../image/lun1.jpg", "../image/lun2.jpg", "../image/lun3.jpg"],
-    //视频数据
-    videosList: [{ "cn": "订单信息", "en": "order" }, { "cn": "网点信息", "en": "branch" }, { "cn": "设备信息", "en": "machine" }, { "cn": "会员信息", "en": "member" }, { "cn": "产品信息", "en": "product" }, { "cn": "站点信息", "en": "station" }]
-  },
+    orderData: [],
 
-  activeNav(e){
-    this.setData({
-      currentIndexNav:e.target.dataset.index
+  },
+  getOthersList(en) {
+    let that = this;
+    if (en == "station") {
+      var Url = "http://192.168.2.169:8081/ccsactcom/weixinShowStation";
+
+
+    }
+    wx.request({
+      url: Url,
+      success(res) {
+        console.log(res.data);
+        that.setData({
+          orderData: res.data
+        })
+      }
     })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
-
+    let en = options.en;
+    console.log(en);
+    this.getOthersList(en);
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-    
+
   }
 })

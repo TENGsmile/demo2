@@ -1,0 +1,58 @@
+<scroll-view scroll-x="true" class='scrollClass'>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">网点名称</view>
+    <view class="th">年龄层</view>
+    <view class="th">男女比例</view>
+    <view class="th">上班时间</view>
+    <view class="th">下班时间</view>
+    <view class="th">周末是否加班</view> 
+    <view class="th">晚上是否加班</view>  
+    <view class="th">楼宇名称</view>  
+    <view class="th">地址</view>  
+    <view class="th">设备型号</view>  
+    <view class="th">网点负责人</view>
+    <view class="th">手机号码</view> 
+    <view class="th">物业公司名称</view>    
+<view class="th">物业公司联系人</view> 
+    <view class="th">物业公司联系人手机号</view>
+    <view class="th">收费方式</view> 
+  </view>
+  <block wx:for="{{orderData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.branchName}}</view> 
+      <view class="td">{{item.ageGroup}}</view> 
+      <view class="td">{{item.ratio}}</view> 
+      <view class="td">{{item.workBeginTime}}</view> 
+      <view class="td">{{item.workEndTime}}</view> 
+      <view class="td">{{item.nightWork}}</view> 
+      <view class="td">{{item.buildingName}}</view> 
+      <view class="td">{{item.companyAddress}}</view> 
+      <view class="td">{{item.machineType}}</view> 
+      <view class="td">{{item.linkMan}}</view> 
+      <view class="td">{{item.mobile}}</view> 
+      <view class="td">{{item.propertyCompanyName}}</view> 
+      <view class="td">{{item.propertyMan}}</view> 
+      <view class="td">{{item.propertyManMobile}}</view> 
+      <view class="td">{{item.payType}}</view> 
+    </view>
+    <view class="tr" wx:else>
+       <view class="td">{{item.branchName}}</view> 
+      <view class="td">{{item.ageGroup}}</view> 
+      <view class="td">{{item.ratio}}</view> 
+      <view class="td">{{item.workBeginTime}}</view> 
+      <view class="td">{{item.workEndTime}}</view> 
+      <view class="td">{{item.nightWork}}</view> 
+      <view class="td">{{item.buildingName}}</view> 
+      <view class="td">{{item.companyAddress}}</view> 
+      <view class="td">{{item.machineType}}</view> 
+      <view class="td">{{item.linkMan}}</view> 
+      <view class="td">{{item.mobile}}</view> 
+      <view class="td">{{item.propertyCompanyName}}</view> 
+      <view class="td">{{item.propertyMan}}</view> 
+      <view class="td">{{item.propertyManMobile}}</view> 
+      <view class="td">{{item.payType}}</view>  
+    </view>
+  </block>
+</view>
+</scroll-view>
