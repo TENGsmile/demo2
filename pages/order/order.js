@@ -3,7 +3,8 @@
 const app = getApp()
 
 
-var url = "http://192.168.60.7:8081/ccsactcom/weixinShowOrder";
+var url = "http://192.168.50.12:8081/ccsactcom/weixinShowOrder";
+
 var page = 1;
 var page_size = 20;
 var sort = "last";
@@ -56,7 +57,9 @@ Page({
     hidden: true,
     list: [],
     scrollTop: 0,
-    scrollHeight: 0
+    scrollHeight: 0,
+    //轮播图数据
+    swiperList: ["../image/lun1.jpg", "../image/lun2.jpg", "../image/lun3.jpg"],
 
   },
   onLoad: function () {

@@ -1,19 +1,41 @@
 {
   "pages": [
+    "pages/canvas/canvas",
     "pages/index/index",
     "pages/order/order",
     "pages/branch/branch",
     "pages/machine/machine",
     "pages/member/member",
     "pages/product/product",
-    "pages/station/station"
+    "pages/station/station",
+    "pages/user/user",
+    "pages/login/login"
   ],
   "window": {
     "navigationBarTitleText": "Demo",
     "backgroundColor": "#eeeeee"
-    
   },
-  
+  "tabBar": {
+    "selectedColor": "#11cd6e",
+    "list": [
+      {
+        "selectedIconPath": "pages/image/1.png",
+        "iconPath": "pages/image/1.png",
+        "pagePath": "pages/index/index",
+        "text": "中科首页"
+      },
+      {
+        "selectedIconPath": "pages/image/wechatHL.png",
+        "iconPath": "pages/image/wechatHL.png",
+        "pagePath": "pages/user/user",
+        "text": "个人中心"
+      },
+       {
+        "pagePath": "pages/canvas/canvas",
+        "text": "画布"
+      }
+    ]
+  },
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
@@ -21,5 +43,10 @@
   "debug": true,
   "navigateToMiniProgramAppIdList": [
     "wxe5f52902cf4de896"
-  ]
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
 }

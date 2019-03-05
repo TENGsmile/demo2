@@ -1,0 +1,2 @@
+<canvas canvas-id="myCanvas" class='canvas' />
+<button bindtap='savetup' class="save">保存图片</button>

@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="header">
+    <!--index.wxml-->
+    <view class="container">
+      <view class="userinfo">
+        <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button> -->
+        <block>
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="menu-list">
+    <block wx:for="{{list}}" wx:key="index">
+      <view class="menu-item" data-hi="{{item.en}}" bindtap="tapMenuItem">
+        <view class="menu-item-main" url="" id="{{index}}">
+          <text class="menu-item-name">{{item.cn}}</text>
+          <image class="menu-item-arrow" src="../image/arrowright.png">
+          </image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -14,7 +14,7 @@
     <view class="th">商品标签</view>
     <view class="th">生产日期</view>   
   </view>
-  <block wx:for="{{orderData}}" wx:key="{{code}}">
+  <block wx:for="{{list}}" wx:key="{{code}}">
     <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
       <view class="td">{{item.productName}}</view> 
       <view class="td">{{item.categoryName}}</view> 

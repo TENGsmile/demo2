@@ -1,5 +1,6 @@
 Page({
 
+
   /**
    * 页面的初始数据
    */
@@ -31,7 +32,7 @@ Page({
   onReady: function () {
     let that = this;
     wx.request({
-      url: "http://192.168.60.7:8081/ccsactcom/weixinShow",
+      url: "http://192.168.50.12:8081/ccsactcom/weixinShow",
       header: {
         'content-type': 'application/json' // 默认值
       },
@@ -53,7 +54,7 @@ Page({
         }
        
         that.setData({
-          newLists: newList
+          newLists: [newList[0], newList[1], newList[2], newList[3], newList[4], newList[5]]
         })
         
         

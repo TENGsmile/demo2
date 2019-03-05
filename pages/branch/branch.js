@@ -3,7 +3,8 @@
 const app = getApp()
 
 
-var url = "http://192.168.60.7:8081/ccsactcom/weixinShowBranch";
+var url = "http://192.168.50.12:8081/ccsactcom/weixinShowBranch";
+
 var page = 1;
 var page_size = 10;
 var sort = "last";
